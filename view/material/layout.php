@@ -6,6 +6,13 @@
 	<title><?php e($title.' - '.config('site_name'));?></title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.1/dist/css/mdui.min.css" integrity="sha256-lCFxSSYsY5OMx6y8gp8/j6NVngvBh3ulMtrf4SX5Z5A=" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/mdui@0.4.1/dist/js/mdui.min.js" integrity="sha256-dZxrLDxoyEQADIAGrWhPtWqjDFvZZBigzArprSzkKgI=" crossorigin="anonymous"></script>
+	<!--http强制访问https-->
+	<script type="text/javascript">
+		var targetProtocol = "https:";
+		if (window.location.protocol != targetProtocol)
+ 		window.location.href = targetProtocol +
+  		window.location.href.substring(window.location.protocol.length);
+	</script>
 	<style>
 		.mdui-appbar .mdui-toolbar{
 			height:56px;
