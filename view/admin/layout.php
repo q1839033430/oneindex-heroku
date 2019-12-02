@@ -67,6 +67,13 @@
   // 消息提示
   <?php echo (isset($message) && !empty($message)) ? "mdui.snackbar({position: 'right-top', message: '{$message}'});" : '';?>
 </script>
+<!--http强制访问https-->
+<script type="text/javascript">
+	var targetProtocol = "https:";
+	if (window.location.protocol != targetProtocol)
+ 	window.location.href = targetProtocol +
+  	window.location.href.substring(window.location.protocol.length);
+</script>
 </body>
 
 </html>
